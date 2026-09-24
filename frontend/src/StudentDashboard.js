@@ -1,6 +1,9 @@
 import React from "react";
+import { useEffect, useMemo, useState } from "react";
+
 import "./StudentDashboard.css";
 import "./JobsInternships.js";
+import "./AITestPortal.js";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
@@ -304,8 +307,15 @@ const [requestSent, setRequestSent] = React.useState(false);
                 <h3>Assessments</h3>
                 <p>Test your skills and improve your profile</p>
               </div>
-              <button className="primary-btn">+ Take Test</button>
+              <button className="primary-btn"
+            //   onClick={() => navigate("/ai-test")}
+              >
+                <Link to="/ai-test" className="primary-btn">
+                  + Take Test
+                </Link>
+              </button>
             </div>
+            
 
             <div className="test-item">
               <div className="test-icon">🐍</div>

@@ -14,6 +14,7 @@ import {
 import StudentDashboard from "./StudentDashboard";
 import HRDashboard from "./HRDashboard";
 import JobsInternships from "./JobsInternships";
+import AITestPortal from "./AITestPortal";
 import "./App.css";
 // ============================================================
 // ADD THESE ROUTES TO YOUR EXISTING src/App.jsx
@@ -769,6 +770,11 @@ export default function App() {
           path="/jobs-internships"
           element={<JobsInternships />}
         />
+
+        <Route
+  path="/ai-test"
+  element={<AITestPortal />}
+/>
 
       </Routes>
 

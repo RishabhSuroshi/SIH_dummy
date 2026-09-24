@@ -305,9 +305,8 @@ function JobsInternships() {
 
           <button
             className="nav-button"
-            onClick={() => navigate("/student-dashboard")}
-          >Student Dashboard
-            
+            onClick={() => navigate("/student-dashboard")}>
+            Student Dashboard
           </button>
 
           
