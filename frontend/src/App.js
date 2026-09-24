@@ -13,12 +13,13 @@ import {
 
 import StudentDashboard from "./StudentDashboard";
 import HRDashboard from "./HRDashboard";
+import JobsInternships from "./JobsInternships";
 import "./App.css";
 // ============================================================
 // ADD THESE ROUTES TO YOUR EXISTING src/App.jsx
 // ============================================================
 
-import InternshipUpdates from "./InternshipUpdates";
+import InternshipUpdates from "./JobsInternships";
 
 
 
@@ -764,8 +765,15 @@ export default function App() {
           path="/hr-dashboard"
           element={<HRDashboard />}
         />
-        
+          <Route
+          path="/jobs-internships"
+          element={<JobsInternships />}
+        />
+
       </Routes>
+
+      
+      
       
     </BrowserRouter>
   );

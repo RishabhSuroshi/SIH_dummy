@@ -1,5 +1,10 @@
 import React from "react";
 import "./StudentDashboard.css";
+import "./JobsInternships.js";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
+
 
 export default function StudentDashboard() {
 const [activeNav, setActiveNav] = React.useState("dashboard");
@@ -413,16 +418,18 @@ const [requestSent, setRequestSent] = React.useState(false);
               <div className="match">83% Match</div>
             </div>
 
-         <button
-  className="view-all-btn"to="/InternshipUpdates"
-//   onClick={() => setShowAllInternships(!showAllInternships)}
->
-  {/* {showAllInternships
-    ? "Show Less ↑"
-    : "View All Internship Opportunities →"} */}
-    
+            <button href="./JobsInternships.js"
+    className="view-all-btn"to="./JobsInternships.js"
+    //   onClick={() => setShowAllInternships(!showAllInternships)}
+    >
+        <Link to="/jobs-internships" className="view-all-btn">
   View All Internship Opportunities →
-</button> 
+</Link>
+    {/* {showAllInternships
+        ? "Show Less ↑"
+        : "View All Internship Opportunities →"} */}
+        
+    </button> 
 
 {showAllInternships && (
   <div className="extra-internships">
@@ -470,10 +477,14 @@ const [requestSent, setRequestSent] = React.useState(false);
 
         <button
   className="primary-btn large"
-//   onClick={() => navigate("InternshipUpdates")}
-href="InternshipUpdates.js"
+//   onClick={() => navigate("/jobs-internships")}
+
 >
-INTERNSHIP UPDATE</button>
+
+
+<Link to="/jobs-internships" className="primary-btn large">
+            INTERNSHIP UPDATE
+          </Link></button>
         </section>
 
         {/* Skill Gap */}
